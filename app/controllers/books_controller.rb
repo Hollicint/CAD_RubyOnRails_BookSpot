@@ -14,20 +14,20 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
-  # show 
+  # show
   def show
   end
 
-  # new 
+  # new
   def new
     @book = Book.new
   end
 
-  # edit 
+  # edit
   def edit
   end
 
-  # create 
+  # create
   def create
     # @book = Book.new(book_params)
 
@@ -47,7 +47,7 @@ class BooksController < ApplicationController
     end
   end
 
-  #  update 
+  #  update
   def update
     # new repository instance
     # @book_repository =BookRepository.new
@@ -65,7 +65,7 @@ class BooksController < ApplicationController
     end
   end
 
-  # DELETE 
+  # DELETE
   def destroy
     # @book.destroy!
 
