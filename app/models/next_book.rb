@@ -1,0 +1,2 @@
+class NextBook < ApplicationRecord
+end

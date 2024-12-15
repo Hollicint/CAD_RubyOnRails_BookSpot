@@ -22,7 +22,7 @@ class BookRepository
     end
 
     # Deletes the book
-    def delete(book)
-        book.destory
+    def destroy(book)
+        book.destroy
     end
 end

@@ -72,7 +72,7 @@ class BooksController < ApplicationController
     # new repository instance
     # @book_repository =BookRepository.new
     # delete book with repository
-    @book_repository.delete(@book)
+    @book_repository.destroy(@book)
 
     respond_to do |format|
       format.html { redirect_to books_path, status: :see_other, notice: "Book was successfully Deleted." }
