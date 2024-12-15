@@ -1,0 +1,20 @@
+<% content_for :title, "New book" %>
+
+<title>New book</title>
+<br>
+<p>Complete your book form below to be able to add your book to your growing collection </p>
+
+
+
+
+<%= render "form", book: @book %>
+
+<br>
+
+<div>
+ Open your Book <%= link_to "Collection", books_path %>
+</div>
+<br>
+
+<%= image_tag "addbookimage.png"%>  <!--https://www.pexels.com/photo/books-filed-neatly-on-shelves-1907785/-->
+<%= image_tag "addbookimage2.png"%> <!--https://www.pexels.com/photo/string-lights-on-a-book-1791742/-->
