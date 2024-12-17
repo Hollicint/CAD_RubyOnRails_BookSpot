@@ -21,7 +21,12 @@ class BaseRepository
 
     # Updates the record with the parameter
     def update(record, params)
-        record.update(params)
+        if record.update(params)
+            record
+        else
+            false
+        end        
+    
     end
 
     # Deletes the record
