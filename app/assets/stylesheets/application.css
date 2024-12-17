@@ -9,14 +9,93 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
-.headnav
-{
+/*
+  Header , Body & footer CSS
+*/
+.headnav{
   background-color: #704264;
-  color: #f2f2f2;
+  color: #FBF6E9;
 }
- .footnav {
+#navbarNavAltMarkup{
+  border: 5px solid #A888B5;
+}
+.nav-item{
+ /* border: 1px solid #B6A28E;*/
+}
+
+.mainBody{
+  background-color: #FBF6E9;
+  height: 100%;
+  margin: 0;
+}
+.footnav {
     flex-shrink: 0;
     background-color: #B6A28E;
-  }
+    color: #FBF6E9;
+    border: 5px solid #A888B5;
+    padding: 10px 0;
+    
+ }
+/*
+ Text & link 
+*/
+ a {
+    color: #131010;
+    font-size: 20px;
+ }
 
+ h4{
+  font-size: 40px;
+  font-style: 'Arial',bold, sans-serif;
+  text-align: center;
+}
 
+ p{
+  font-style: normal;
+  font-size: 19px;
+  text-align: center;
+  
+}
+
+/*
+ Image Css
+*/
+
+.home_images{
+  text-align: center;
+  border: 1px solid #B6A28E;
+  background-color: #704264
+}
+.contact_images{
+  text-align: center;
+  border: 1px solid #B6A28E;
+  background-color: #704264
+}
+
+/*
+  Body text
+*/
+
+.homeText
+{
+  text-align: center;
+  font-size: 20px;
+}
+.bookCollection_list{
+  border: 5px  #704264;
+  background-color: #FBF6E9;
+  text-align: left;
+  font-size: 25px;
+}
+
+#contactForm{
+  color: #FBF6E9;
+  text-align: center;
+  border: 1px solid #704264;
+  background-color: #74616f;
+  padding: 10px 10px;
+}
+
+.nextBook_list{
+  border: 5px solid #B6A28E;
+}

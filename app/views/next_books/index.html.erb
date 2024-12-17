@@ -35,23 +35,24 @@
       <%= form.submit 'Add Book to List' %>
     </div>
   <% end %>
+  <br>
+  <div class="nextBook_list"
+     <br>
+     <h4>The one place to store your need to Books List</h4>
+      <p> We dont judge at Book Spot no matter how long a book has been on your list </p>
+      <p> Please Refresh Page if book doesnt appear below</p>
+            <p>♠ --- ♣ --- ♥ --- ♦</p>
+      <br>
   
- 
+    <ul>
+      <% @next_books.each do |book| %>
+        <li>
+          <%= book.title %> by <%= book.author %> | Status: <%= book.status %> |  <%= "  Note: #{book.note}" if book.note.present? %>
+          <p>♥</p>
+        </li>
+      <% end %>
+     </ul>
+  </div>
   <br>
-  <h3>The one place to store your need to Books List</h3>
-  <p> We dont judge at Book Spot no matter how long a book has been on your list </p>
-  <p> Please Refresh Page if book doesnt appear below</p>
-  <br>
-
-  <ul>
-    <% @next_books.each do |book| %>
-      <li>
-        <%= book.title %> by <%= book.author %> |
-         Status: <%= book.status %> |
-        <%= "  Note: #{book.note}" if book.note.present? %>
-       </li>
-    <% end %>
-  </ul>
-
  
 
