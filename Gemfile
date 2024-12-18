@@ -5,7 +5,7 @@ gem "rails", "~> 8.0.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 2.1"
+#gem "sqlite3", ">= 2.1",  group: [:development, :test]
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
@@ -50,7 +50,7 @@ group :development, :test do
 
   gem "bundler-audit"
   gem "ruby_audit"
-  gem "pg"
+ # gem "pg"
   gem "rubocop-rails"
   gem "rubocop"
 
@@ -59,6 +59,10 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  #Use sqlite3 only in development and test environments
+  gem "sqlite3", ">= 2.1"
+
 end
 
 group :development do
@@ -71,3 +75,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Heroku uses Heroku Postgres DB based on PostgreSQL 
+group :production do 
+  gem 'pg' 
+  gem 'rails_12factor'
+ end

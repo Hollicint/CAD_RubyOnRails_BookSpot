@@ -18,6 +18,9 @@ Rails.application.configure do
   # Cache assets for far-future expiry since they are all digest stamped.
   config.public_file_server.headers = { "cache-control" => "public, max-age=#{1.year.to_i}" }
 
+  # Serve static files (required for Heroku).
+  config.public_file_server.enabled = true
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
 
@@ -72,6 +75,10 @@ Rails.application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
+
+ # Compile assets on the fly in production (not recommended for large apps).
+ config.assets.compile = true
+
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
