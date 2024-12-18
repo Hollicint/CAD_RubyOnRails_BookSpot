@@ -31,6 +31,7 @@ production:
   #database: <%= ENV['DATABASE_URL'] || 'postgresql://postgres:postgres@172.17.0.1:5000/production' %>#
  primary:
    <<: *default
+   adapter: postgresql
    database: storage/production.sqlite3
  cache:
    <<: *default
