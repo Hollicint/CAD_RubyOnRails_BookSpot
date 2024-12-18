@@ -52,7 +52,7 @@ gem "thruster", require: false
 # Heroku uses Heroku Postgres DB based on PostgreSQL 
 group :production do 
   gem 'pg' 
-  gem 'rails_12factor'
+ # gem 'rails_12factor'
  end
 
 
